@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Mercado | Desarrollador Backend</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="./js/contact.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <div class="profile-image">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/94704219.jpg-JLwV2GFlTbpRopNM0iTi5NzKSWOH8N.jpeg"
+              alt="Foto de perfil"
+            />
+          </div>
+          <h1>Daniel Mercado</h1>
+          <h2>Desarrollador Backend</h2>
+          <div class="social-links">
+            <a
+              href="https://github.com/DMercadoCanas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/daniel-mercado-canas-702477260"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="about">
+        <h2>Sobre Mí</h2>
+        <p>
+          Desarrollador Backend con experiencia en Java (Spring Boot) y Python,
+          enfocado en crear aplicaciones robustas y escalables. Mi portafolio
+          incluye proyectos para clientes y personales, demostrando mi capacidad
+          para diseñar e implementar soluciones eficientes que optimizan
+          procesos y mejoran la experiencia del usuario.
+        </p>
+        <p>
+          Además, destaco en comunicación efectiva, trabajo en equipo y
+          resolución de problemas colaborativa, habilidades que aplico y
+          perfecciono en cada proyecto. Estoy listo para contribuir en proyectos
+          desafiantes y seguir creciendo profesionalmente en el desarrollo de
+          software.
+        </p>
+      </section>
+
+      <section id="habilidades" class="skills">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul>
+              <li>
+                <i class="fab fa-java"></i>
+                Java + Spring Boot
+              </li>
+              <li>
+                <i class="fab fa-python"></i>
+                Python
+              </li>
+              <li>
+                <i class="fas fa-server"></i>
+                APIs RESTful
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>
+                <i class="fab fa-html5"></i>
+                HTML5
+              </li>
+              <li>
+                <i class="fab fa-css3-alt"></i>
+                CSS3
+              </li>
+              <li>
+                <i class="fab fa-js"></i>
+                JavaScript
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>¿Interesado en colaborar? ¡Envíame un mensaje!</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="reason">Razón de contacto:</label>
+            <select id="reason" name="reason" required>
+              <option value="">Selecciona una opción</option>
+              <option value="colaboracion">Colaboración en proyecto</option>
+              <option value="oferta_laboral">Oferta laboral</option>
+              <option value="consulta">Consulta técnica</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+        <div id="form-status"></div>
+        <div class="social-links">
+          <a
+            href="https://github.com/DMercadoCanas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daniel-mercado-canas-702477260"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Daniel Mercado. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
