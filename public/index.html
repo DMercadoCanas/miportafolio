@@ -3,164 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniel Mercado | Desarrollador Backend</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/public/assets/maleta.ico"
+      type="image/x-icon"
+    />
+    <title>Daniel - Portafolio</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script src="./js/contact.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Navegación -->
     <header>
       <nav>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre Mí</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section id="inicio" class="hero">
+    <!-- Sección combinada Hero + Sobre Mí -->
+    <section id="inicio" class="hero-about-container">
+      <div class="hero-section">
         <div class="hero-content">
           <div class="profile-image">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/94704219.jpg-JLwV2GFlTbpRopNM0iTi5NzKSWOH8N.jpeg"
-              alt="Foto de perfil"
-            />
+            <img src="/public/assets/94704219.jpg" alt="Daniel" />
           </div>
           <h1>Daniel Mercado</h1>
-          <h2>Desarrollador Backend</h2>
+          <h2>Desarrollador de Software</h2>
           <div class="social-links">
-            <a
-              href="https://github.com/DMercadoCanas"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/DMercadoCanas" target="_blank">
               <i class="fab fa-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/daniel-mercado-canas-702477260"
+              href="https://www.linkedin.com/in/daniel-mercado-ca%C3%B1as-702477260/"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section id="sobre-mi" class="about">
+      <div id="sobre-mi" class="about-section">
         <h2>Sobre Mí</h2>
         <p>
-          Desarrollador Backend con experiencia en Java (Spring Boot) y Python,
-          enfocado en crear aplicaciones robustas y escalables. Mi portafolio
-          incluye proyectos para clientes y personales, demostrando mi capacidad
-          para diseñar e implementar soluciones eficientes que optimizan
-          procesos y mejoran la experiencia del usuario.
+          Técnico en Programación de Software con experiencia en desarrollo
+          Backend y Fullstack. He trabajado en proyectos personales y reales
+          utilizando tecnologías como Node.js, React, PostgreSQL, Prisma, JWT y
+          Git, desarrollando soluciones escalables que automatizan procesos y
+          optimizan el flujo de datos. Familiarizado con principios SOLID, el
+          patrón MVC y el uso de herramientas de control de versiones como Git y
+          GitHub.
         </p>
         <p>
-          Además, destaco en comunicación efectiva, trabajo en equipo y
-          resolución de problemas colaborativa, habilidades que aplico y
-          perfecciono en cada proyecto. Estoy listo para contribuir en proyectos
-          desafiantes y seguir creciendo profesionalmente en el desarrollo de
-          software.
+          Actualmente estoy explorando el desarrollo con Java y Spring Boot,
+          integrando buenas prácticas y pruebas unitarias (JUnit, Mockito) a mi
+          stack. Me destaco por mi curiosidad tecnológica, pensamiento
+          analítico, aprendizaje autónomo y compromiso con el trabajo
+          colaborativo en entornos ágiles. Busco sumar valor en equipos que
+          impulsen el crecimiento profesional y técnico.
         </p>
-      </section>
+        <div class="skills-tags">
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>React</span>
+          <span>PostgreSQL</span>
+          <span>Prisma</span>
+          <span>JWT</span>
+          <span>Python</span>
+          <span>Flet</span>
+          <span>Java</span>
+          <span>Spring Boot</span>
+        </div>
+      </div>
+    </section>
 
-      <section id="habilidades" class="skills">
-        <h2>Habilidades Técnicas</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <ul>
-              <li>
-                <i class="fab fa-java"></i>
-                Java + Spring Boot
-              </li>
-              <li>
-                <i class="fab fa-python"></i>
-                Python
-              </li>
-              <li>
-                <i class="fas fa-server"></i>
-                APIs RESTful
-              </li>
-            </ul>
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+      <h2>Mis Proyectos</h2>
+      <div class="projects-grid">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+          <div class="project-media">
+            <img
+              src="/public/assets/projects/Sistema_POS/dashboard.png"
+              alt="Sistema POS + Inventario"
+              class="project-image"
+            />
+            <video
+              src="/public/assets/projects/Sistema_POS/video_demo.mp4"
+              class="project-video"
+              muted
+              loop
+            ></video>
           </div>
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul>
-              <li>
-                <i class="fab fa-html5"></i>
-                HTML5
-              </li>
-              <li>
-                <i class="fab fa-css3-alt"></i>
-                CSS3
-              </li>
-              <li>
-                <i class="fab fa-js"></i>
-                JavaScript
-              </li>
-            </ul>
+          <div class="project-info">
+            <h3>Sistema POS + Inventario</h3>
+            <p>
+              Un sistema completo de Punto de Venta (POS) e Inventario diseñado
+              para pequeños negocios y misceláneas. Permite gestionar ventas,
+              inventario, usuarios y clientes de manera eficiente y sencilla.
+            </p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>JWT</span><span>TailwindCSS</span
+              ><span>PostgreSQL</span><span>React</span><span>Node.js</span
+              ><span>Express</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/DMercadoCanas/pos-inventario-system-frontend"
+                target="_blank"
+                class="project-link"
+                ><i class="fab fa-github"></i> Código</a
+              >
+              <a
+                href="https://pos-inventario-system-frontend-eupo2z5fh-dmercadocanas-projects.vercel.app/"
+                target="_blank"
+                class="project-link"
+                ><i class="fa fa-external-link-alt"></i> Demo</a
+              >
+            </div>
           </div>
         </div>
-      </section>
 
-      <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <p>¿Interesado en colaborar? ¡Envíame un mensaje!</p>
-        <form id="contact-form" class="contact-form">
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+          <div class="project-media">
+            <img
+              src="/public/assets/projects/Metis/main_metis.png"
+              alt="Metis"
+              class="project-image"
+            />
+            <video
+              src="/public/assets/projects/Metis/video_demo_metis.mp4"
+              class="project-video"
+              muted
+              loop
+            ></video>
+          </div>
+          <div class="project-info">
+            <h3>Metis: Sistema de Certificación para Equipos de Medición</h3>
+            <p>
+              Metis es un sistema avanzado de certificación diseñado para
+              equipos de medición. Facilita la verificación, gestión y
+              certificación de equipos, ofreciendo una solución integral para
+              laboratorios de metrología y organizaciones que requieren un
+              control preciso de sus instrumentos de medición.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Flet</span><span>SQLite</span
+              ><span>Openpyxl</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/DMercadoCanas/Metis"
+                target="_blank"
+                class="project-link"
+                ><i class="fab fa-github"></i> Código</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p>¿Interesado en trabajar juntos? ¡Contáctame!</p>
+      <div class="contact-form">
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xnndvrze"
+          method="POST"
+        >
           <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required />
+            <label for="name">Nombre</label
+            ><input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
+            <label for="email">Email</label
+            ><input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
-            <label for="reason">Razón de contacto:</label>
-            <select id="reason" name="reason" required>
-              <option value="">Selecciona una opción</option>
-              <option value="colaboracion">Colaboración en proyecto</option>
-              <option value="oferta_laboral">Oferta laboral</option>
-              <option value="consulta">Consulta técnica</option>
-              <option value="otro">Otro</option>
-            </select>
+            <label for="company">Empresa (opcional)</label
+            ><input type="text" id="company" name="company" />
           </div>
           <div class="form-group">
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="message">Mensaje</label
+            ><textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit">Enviar mensaje</button>
+          <button type="submit" class="submit-btn">Enviar Mensaje</button>
         </form>
-        <div id="form-status"></div>
-        <div class="social-links">
-          <a
-            href="https://github.com/DMercadoCanas"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/daniel-mercado-canas-702477260"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </div>
-      </section>
-    </main>
+        <div id="formStatus" class="form-status"></div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2025 Daniel Mercado. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Footer -->
+    <footer><p>&copy; 2023 Daniel. Todos los derechos reservados.</p></footer>
+
+    <!-- Scripts -->
+    <script>
+      // Envío del formulario
+      const form = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const formAction = form.getAttribute("action");
+
+          formStatus.innerHTML = '<p class="sending">Enviando mensaje...</p>';
+
+          fetch(formAction, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          })
+            .then((response) => {
+              if (response.ok) {
+                form.reset();
+                formStatus.innerHTML =
+                  '<p class="success">¡Mensaje enviado con éxito! Te responderé pronto.</p>';
+              } else {
+                response.json().then((data) => {
+                  formStatus.innerHTML = `<p class="error">¡Ups! Hubo un problema: ${data.error}</p>`;
+                });
+              }
+            })
+            .catch(() => {
+              formStatus.innerHTML =
+                '<p class="error">¡Ups! Hubo un problema al enviar el mensaje.</p>';
+            });
+        });
+      }
+
+      // Reproducción de video en hover sobre toda la tarjeta
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+
+        projectCards.forEach((card) => {
+          const image = card.querySelector(".project-image");
+          const video = card.querySelector(".project-video");
+
+          if (video.src && video.src !== "/placeholder.svg") {
+            video.addEventListener("loadeddata", function () {
+              video.style.width = getComputedStyle(image).width;
+              video.style.height = getComputedStyle(image).height;
+            });
+          }
+
+          card.addEventListener("mouseenter", function () {
+            if (video.src && video.src !== "/placeholder.svg") {
+              image.style.opacity = "0";
+              video.style.opacity = "1";
+              video.currentTime = 0;
+              video.play();
+            }
+          });
+
+          card.addEventListener("mouseleave", function () {
+            if (video.src && video.src !== "/placeholder.svg") {
+              image.style.opacity = "1";
+              video.style.opacity = "0";
+              video.pause();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
