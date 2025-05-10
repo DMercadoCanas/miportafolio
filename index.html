@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/public/assets/maleta.ico"
-      type="image/x-icon"
-    />
+    <!-- Corregir ruta del favicon -->
+    <link rel="shortcut icon" href="/assets/maleta.png" type="image/x-icon" />
     <title>Daniel - Portafolio</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <!-- Corregir ruta del CSS -->
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -36,7 +34,8 @@
       <div class="hero-section">
         <div class="hero-content">
           <div class="profile-image">
-            <img src="/public/assets/94704219.jpg" alt="Daniel" />
+            <!-- Corregir ruta de la imagen -->
+            <img src="/assets/94704219.jpg" alt="Daniel" />
           </div>
           <h1>Daniel Mercado</h1>
           <h2>Desarrollador de Software</h2>
@@ -74,16 +73,46 @@
           impulsen el crecimiento profesional y técnico.
         </p>
         <div class="skills-tags">
-          <span>JavaScript</span>
-          <span>Node.js</span>
-          <span>React</span>
-          <span>PostgreSQL</span>
-          <span>Prisma</span>
-          <span>JWT</span>
-          <span>Python</span>
-          <span>Flet</span>
-          <span>Java</span>
-          <span>Spring Boot</span>
+          <span class="tech-tag">
+            <img src="/assets/logos/javascript.svg" alt="JavaScript" />
+            JavaScript
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/nodejs.svg" alt="Node.js" />
+            Node.js
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/react.svg" alt="React" />
+            React
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/posgresql.svg" alt="PostgreSQL" />
+            PostgreSQL
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/prisma.svg" alt="Prisma" />
+            Prisma
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/javascript.svg" alt="JWT" />
+            JWT
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/python.svg" alt="Python" />
+            Python
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/flet.svg" alt="Flet" />
+            Flet
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/java.svg" alt="Java" />
+            Java
+          </span>
+          <span class="tech-tag">
+            <img src="/assets/logos/spring.svg" alt="Spring Boot" />
+            Spring Boot
+          </span>
         </div>
       </div>
     </section>
@@ -95,13 +124,15 @@
         <!-- Proyecto 1 -->
         <div class="project-card">
           <div class="project-media">
+            <!-- Corregir ruta de la imagen -->
             <img
-              src="/public/assets/projects/Sistema_POS/dashboard.png"
+              src="/assets/projects/Sistema_POS/dashboard.png"
               alt="Sistema POS + Inventario"
               class="project-image"
             />
+            <!-- Corregir ruta del video -->
             <video
-              src="/public/assets/projects/Sistema_POS/video_demo.mp4"
+              src="/assets/projects/Sistema_POS/video_demo.mp4"
               class="project-video"
               muted
               loop
@@ -115,9 +146,34 @@
               inventario, usuarios y clientes de manera eficiente y sencilla.
             </p>
             <div class="project-tech">
-              <span>JavaScript</span><span>JWT</span><span>TailwindCSS</span
-              ><span>PostgreSQL</span><span>React</span><span>Node.js</span
-              ><span>Express</span>
+              <span class="tech-tag">
+                <img src="/assets/logos/javascript.svg" alt="JavaScript" />
+                JavaScript
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/javascript.svg" alt="JWT" />
+                JWT
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/tailwindcss.svg" alt="TailwindCSS" />
+                TailwindCSS
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/posgresql.svg" alt="PostgreSQL" />
+                PostgreSQL
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/react.svg" alt="React" />
+                React
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/nodejs.svg" alt="Node.js" />
+                Node.js
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/express.svg" alt="Express" />
+                Express
+              </span>
             </div>
             <div class="project-links">
               <a
@@ -139,13 +195,15 @@
         <!-- Proyecto 2 -->
         <div class="project-card">
           <div class="project-media">
+            <!-- Corregir ruta de la imagen -->
             <img
-              src="/public/assets/projects/Metis/main_metis.png"
+              src="/assets/projects/Metis/main_metis.png"
               alt="Metis"
               class="project-image"
             />
+            <!-- Corregir ruta del video -->
             <video
-              src="/public/assets/projects/Metis/video_demo_metis.mp4"
+              src="/assets/projects/Metis/video_demo_metis.mp4"
               class="project-video"
               muted
               loop
@@ -161,8 +219,22 @@
               control preciso de sus instrumentos de medición.
             </p>
             <div class="project-tech">
-              <span>Python</span><span>Flet</span><span>SQLite</span
-              ><span>Openpyxl</span>
+              <span class="tech-tag">
+                <img src="/assets/logos/python.svg" alt="Python" />
+                Python
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/flet.svg" alt="Flet" />
+                Flet
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/sqlite.svg" alt="SQLite" />
+                SQLite
+              </span>
+              <span class="tech-tag">
+                <img src="/assets/logos/openpyxl.svg" alt="Openpyxl" />
+                Openpyxl
+              </span>
             </div>
             <div class="project-links">
               <a
@@ -177,40 +249,55 @@
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Sección de Contacto -->
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
-      <p>¿Interesado en trabajar juntos? ¡Contáctame!</p>
-      <div class="contact-form">
-        <form
-          id="contactForm"
-          action="https://formspree.io/f/xnndvrze"
-          method="POST"
-        >
-          <div class="form-group">
-            <label for="name">Nombre</label
-            ><input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label
-            ><input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="company">Empresa (opcional)</label
-            ><input type="text" id="company" name="company" />
-          </div>
-          <div class="form-group">
-            <label for="message">Mensaje</label
-            ><textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Enviar Mensaje</button>
-        </form>
-        <div id="formStatus" class="form-status"></div>
-      </div>
+      <p>
+        ¿Interesado en trabajar juntos o tienes alguna pregunta? ¡No dudes en
+        contactarme!
+      </p>
+      <form
+        action="https://formspree.io/f/xdoqgvnj"
+        method="POST"
+        class="contact-form"
+      >
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Tu nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Tu email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Tu mensaje"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+      </form>
     </section>
 
     <!-- Footer -->
-    <footer><p>&copy; 2023 Daniel. Todos los derechos reservados.</p></footer>
+    <footer>
+      <p>&copy; 2023 Daniel Mercado. Todos los derechos reservados.</p>
+    </footer>
 
     <!-- Scripts -->
     <script>

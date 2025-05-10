@@ -34,7 +34,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(18, 18, 18, 0.95);
+  background-color: rgba(31, 30, 30, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
@@ -62,7 +62,7 @@ nav a:hover {
 .hero-about-container {
   display: flex;
   min-height: 100vh;
-  padding-top: 50px; /* Para compensar la barra de navegación fija */
+  padding-top: 40px;
   padding-bottom: 2rem;
   gap: 2rem;
   align-items: center;
@@ -75,7 +75,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background-color: var(--card-bg);
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   border-radius: 12px;
   border: 1px solid var(--card-border);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -213,6 +213,7 @@ section h2 {
   color: var(--accent);
 }
 
+/* Etiquetas de tecnologías con logos */
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
@@ -220,13 +221,31 @@ section h2 {
   margin-top: 1.5rem;
 }
 
-.skills-tags span {
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background-color: rgba(100, 108, 255, 0.1);
   color: var(--accent);
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
   border: 1px solid rgba(100, 108, 255, 0.2);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(100, 108, 255, 0.15);
+}
+
+.tech-tag img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(
+    1.5
+  ); /* Hace que los logos se vean mejor en fondo oscuro */
 }
 
 /* Proyectos */
@@ -285,6 +304,14 @@ section h2 {
   z-index: 2;
 }
 
+.project-media:hover .project-image {
+  opacity: 0;
+}
+
+.project-media:hover .project-video {
+  opacity: 1;
+}
+
 .project-info {
   padding: 1.5rem;
 }
@@ -307,13 +334,10 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-.project-tech span {
-  background-color: rgba(100, 108, 255, 0.1);
-  color: var(--accent);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
+/* Reutilizamos .tech-tag para las tecnologías de proyectos */
+.project-tech .tech-tag {
   font-size: 0.8rem;
-  border: 1px solid rgba(100, 108, 255, 0.2);
+  padding: 0.3rem 0.7rem;
 }
 
 .project-links {
@@ -514,5 +538,10 @@ footer {
 
   .skills-tags {
     justify-content: center;
+  }
+
+  .tech-tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
 }
