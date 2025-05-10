@@ -1,4 +1,4 @@
-# Portafolio de Daniel Mercado
+# Mi portafolio
 
 ![Portafolio Preview](/public/assets/pantalla_github.png)
 
