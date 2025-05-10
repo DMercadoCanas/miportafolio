@@ -1,6 +1,6 @@
 # Mi portafolio
 
-![Portafolio Preview](/public/assets/pantalla_github.png)
+![Portafolio Preview](assets/pantalla_github.png)
 
 ## 📋 Descripción
 
