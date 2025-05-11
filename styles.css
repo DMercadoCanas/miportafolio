@@ -58,6 +58,136 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* Navegación Responsiva */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+.logo a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  color: var(--accent);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-secondary);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    padding: 4rem 2rem 2rem;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu ul li a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu ul li a:hover {
+    background-color: rgba(100, 108, 255, 0.1);
+  }
+
+  /* Animación del menú hamburguesa */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Overlay para cuando el menú está abierto */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 /* Sección Hero + About combinada */
 .hero-about-container {
   display: flex;
@@ -379,83 +509,225 @@ section h2 {
   transform: translateY(-3px);
 }
 
-/* Contacto */
-.contact {
-  text-align: center;
+/* Sección de Contacto Moderna */
+.contact-modern {
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact p {
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  max-width: 600px;
+.contact-container {
+  max-width: 800px;
   margin: 0 auto;
-  text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--accent), #9089fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.contact-header p {
   color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: var(--bg-secondary);
-  border: 1px solid #333;
-  border-radius: 4px;
-  color: var(--text-primary);
-  font-family: inherit;
+.contact-form-modern {
+  display: grid;
+  gap: 2rem;
+  position: relative;
+}
+
+.form-field {
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  color: var(--text-secondary);
   transition: var(--transition);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 12px 0 12px 30px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.3);
 }
 
-.submit-btn {
-  background-color: var(--accent);
+.input-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input-container label {
+  position: absolute;
+  left: 30px;
+  top: 12px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label,
+.input-container textarea:focus ~ label,
+.input-container textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--card-border);
+}
+
+.input-container .underline::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), #9089fc);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.input-container input:focus ~ .underline::before,
+.input-container textarea:focus ~ .underline::before {
+  transform: scaleX(1);
+}
+
+.input-container input:focus ~ i,
+.input-container textarea:focus ~ i {
+  color: var(--accent);
+}
+
+.submit-btn-modern {
+  background: linear-gradient(90deg, var(--accent), #9089fc);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
   font-size: 1rem;
-  border-radius: 4px;
+  font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
 }
 
-.submit-btn:hover {
-  background-color: #535bf2;
+.submit-btn-modern span {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.submit-btn-modern i {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.submit-btn-modern:hover {
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
   transform: translateY(-2px);
 }
 
-.form-status {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 4px;
+.submit-btn-modern:hover span {
+  transform: translateX(-3px);
 }
 
-.form-status .success {
-  color: var(--success);
+.submit-btn-modern:hover i {
+  transform: translateX(3px);
 }
 
-.form-status .error {
-  color: var(--error);
+.submit-btn-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #9089fc, var(--accent));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.form-status .sending {
-  color: var(--accent);
+.submit-btn-modern:hover::before {
+  opacity: 1;
+}
+
+.contact-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.decoration-circle {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(100, 108, 255, 0.1),
+    rgba(144, 137, 252, 0.05)
+  );
+  opacity: 0.5;
+}
+
+.decoration-line {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(100, 108, 255, 0.1);
+  border-radius: 50%;
 }
 
 /* Footer */
@@ -464,6 +736,35 @@ footer {
   padding: 2rem;
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form-modern {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-modern {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+
+  .submit-btn-modern {
+    width: 100%;
+  }
 }
 
 /* Responsive */

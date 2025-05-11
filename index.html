@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Corregir ruta del favicon -->
+
     <link rel="shortcut icon" href="/assets/maleta.png" type="image/x-icon" />
     <title>Daniel - Portafolio</title>
-    <!-- Corregir ruta del CSS -->
+
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -18,15 +18,27 @@
     />
   </head>
   <body>
-    <!-- Navegación -->
+    <!-- Navegación con menú hamburguesa -->
     <header>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#inicio">Mi Portafolio</a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Sección combinada Hero + Sobre Mí -->
@@ -34,11 +46,10 @@
       <div class="hero-section">
         <div class="hero-content">
           <div class="profile-image">
-            <!-- Corregir ruta de la imagen -->
             <img src="/assets/94704219.jpg" alt="Daniel" />
           </div>
           <h1>Daniel Mercado</h1>
-          <h2>Desarrollador de Software</h2>
+          <h2>Desarrollador Backend - Fullstack</h2>
           <div class="social-links">
             <a href="https://github.com/DMercadoCanas" target="_blank">
               <i class="fab fa-github"></i>
@@ -124,13 +135,12 @@
         <!-- Proyecto 1 -->
         <div class="project-card">
           <div class="project-media">
-            <!-- Corregir ruta de la imagen -->
             <img
               src="/assets/projects/Sistema_POS/dashboard.png"
               alt="Sistema POS + Inventario"
               class="project-image"
             />
-            <!-- Corregir ruta del video -->
+
             <video
               src="/assets/projects/Sistema_POS/video_demo.mp4"
               class="project-video"
@@ -195,13 +205,12 @@
         <!-- Proyecto 2 -->
         <div class="project-card">
           <div class="project-media">
-            <!-- Corregir ruta de la imagen -->
             <img
               src="/assets/projects/Metis/main_metis.png"
               alt="Metis"
               class="project-image"
             />
-            <!-- Corregir ruta del video -->
+
             <video
               src="/assets/projects/Metis/video_demo_metis.mp4"
               class="project-video"
@@ -249,49 +258,69 @@
       </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="contact">
-      <h2>Contacto</h2>
-      <p>
-        ¿Interesado en trabajar juntos o tienes alguna pregunta? ¡No dudes en
-        contactarme!
-      </p>
-      <form
-        action="https://formspree.io/f/xnndvrze"
-        method="POST"
-        class="contact-form"
-      >
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Tu nombre"
-          />
+    <!-- Sección de Contacto Moderna -->
+    <section id="contacto" class="contact-modern">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>Contacto</h2>
+          <p>¿Interesado en trabajar juntos? Envíame un mensaje</p>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Tu email"
-          />
+
+        <form
+          action="https://formspree.io/f/xnndvrze"
+          method="POST"
+          class="contact-form-modern"
+        >
+          <div class="form-field">
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="off"
+              />
+              <label for="name">Nombre</label>
+              <div class="underline"></div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="input-container">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="off"
+              />
+              <label for="email">Email</label>
+              <div class="underline"></div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="input-container textarea-container">
+              <i class="fas fa-comment-alt"></i>
+              <textarea id="message" name="message" required></textarea>
+              <label for="message">Mensaje</label>
+              <div class="underline"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn-modern">
+            <span>Enviar Mensaje</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="contact-decoration">
+          <div class="decoration-circle"></div>
+          <div class="decoration-line"></div>
         </div>
-        <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Tu mensaje"
-          ></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
-      </form>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -367,6 +396,59 @@
               video.pause();
             }
           });
+        });
+      });
+    </script>
+
+    <!-- Script para el menú móvil -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elementos del menú
+        const menuToggle = document.getElementById("mobile-menu");
+        const navMenu = document.querySelector(".nav-menu");
+        const body = document.body;
+
+        // Crear overlay para el fondo cuando el menú está abierto
+        const overlay = document.createElement("div");
+        overlay.className = "menu-overlay";
+        body.appendChild(overlay);
+
+        // Función para alternar el menú
+        function toggleMenu() {
+          menuToggle.classList.toggle("active");
+          navMenu.classList.toggle("active");
+          overlay.classList.toggle("active");
+
+          // Bloquear scroll cuando el menú está abierto
+          if (menuToggle.classList.contains("active")) {
+            body.style.overflow = "hidden";
+          } else {
+            body.style.overflow = "";
+          }
+        }
+
+        // Event listeners
+        menuToggle.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", toggleMenu);
+
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (menuToggle.classList.contains("active")) {
+              toggleMenu();
+            }
+          });
+        });
+
+        // Cerrar menú al redimensionar la ventana a un tamaño grande
+        window.addEventListener("resize", () => {
+          if (
+            window.innerWidth > 768 &&
+            menuToggle.classList.contains("active")
+          ) {
+            toggleMenu();
+          }
         });
       });
     </script>
